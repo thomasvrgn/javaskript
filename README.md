@@ -62,8 +62,12 @@ NPM > 6
 
 To run the tests:
 
-```
-npm run test
+```bash
+$ npm run test
+
+# OR
+
+$ yarn test
 ```
 
 ### Break down into end to end tests
@@ -75,8 +79,12 @@ No tests for the moment.
 The linter is present in order to allow anyone to be able to contribute while
 being in the main coherence of the code.
 
-```
-npm run lint
+```bash
+$ npm run lint
+
+# OR
+
+$ yarn lint
 ```
 
 ## 🎈 Usage <a name="usage"></a>
@@ -108,6 +116,10 @@ To build the project, do:
 
 ```bash
 $ npm run bundle 
+
+# OR
+
+$ yarn bundle
 # That generate file called bundle.js, just run it with : node dist/bundle.js
 
 # OR
