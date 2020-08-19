@@ -3,15 +3,15 @@
  <img width=200px height=200px src="assets/logo.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Quark lang</h3>
+<h3 align="center">Javaskript</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/NessMC/quark-lang.svg)](https://github.com/NessMC/quark-lang/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/NessMC/quark-lang.svg)](https://github.com/NessMC/quark-lang/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/NessMC/javaskript.svg)](https://github.com/NessMC/javaskript/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/NessMC/javaskript.svg)](https://github.com/NessMC/javaskript/pulls)
 [![License](https://img.shields.io/badge/license-Creative%20commons-blue.svg)](/LICENSE)
-[![BCH compliance](https://bettercodehub.com/edge/badge/NessMC/quark-lang?branch=master)](https://bettercodehub.com/)
+[![BCH compliance](https://bettercodehub.com/edge/badge/NessMC/javaskript?branch=master)](https://bettercodehub.com/)
 [![Discord](https://discordapp.com/api/guilds/738827425043185717/widget.png?style=shield)](https://discord.gg/sXwE5Dp)
  
 </div>
@@ -19,7 +19,7 @@
 ---
 
 <p align="center"> 
-    Quark is a self-transpiled programming language written in TypeScript.
+    Javaskript is a self-transpiled programming language base on Skript and written in TypeScript.
     <br> 
 </p>
 
@@ -36,8 +36,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-The main goal of Quark is to offer a language that combines simplicity and
-productivity in addition to its cool syntax.
+Javaskript is a programming language that aims to take over the syntax of Skript in order to combine the power of Javascript with the simplicity of Skript.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -48,7 +47,7 @@ system.
 
 ### Prerequisites
 
-To install Quark, you will need:
+To install Javaskript, you will need:
 
 ```
 Node.JS > 13
@@ -86,21 +85,21 @@ No usage informations for the moment.
 
 ## 🚀 Manual installation <a name = "manual"></a>
 
-To deploy Quark lang, do:
+To deploy Javaskript, do:
 
 ```bash
- $ git clone git@github.com:NessMC/quark-lang.git
+ $ git clone git@github.com:NessMC/javaskript.git
 
  # OR
 
  $ git init
- $ git remote add origin git@github.com:NessMC/quark-lang.git
+ $ git remote add origin git@github.com:NessMC/javaskript.git
  $ git pull
 
  # OR
 
- $ docker pull nessmcfr/quark-lang
- $ docker run nessmcfr/quark-lang
+ $ docker pull nessmcfr/javaskript
+ $ docker run nessmcfr/javaskript
 ```
 
 ## 🚀 Build <a name = "build"></a>
@@ -114,7 +113,7 @@ $ npm run bundle
 # OR
 
 $ docker-compose build
-$ docker run quark-lang_app
+$ docker run javaskript_app
 
 ```
 
@@ -123,5 +122,5 @@ $ docker run quark-lang_app
 -   [@NessMC](https://github.com/NessMC) - Idea & Initial work
 
 See also the list of
-[contributors](https://github.com/NessMC/quark-lang/contributors) who
+[contributors](https://github.com/NessMC/javaskript/contributors) who
 participated in this project.

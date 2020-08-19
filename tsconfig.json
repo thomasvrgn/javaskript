@@ -15,7 +15,6 @@
 
         "baseUrl": ".",
         "paths": {
-            "vm/*": ["./src/vm/*"],
             "core/*": ["./src/core/*"],
             "tokens": ["./src/core/tokens/tokens.ts"],
             "other/*": ["./src/other/*"],
