@@ -19,7 +19,7 @@
 ---
 
 <p align="center"> 
-    Javaskript is a self-transpiled programming language base on Skript and written in TypeScript.
+    Javaskript is a transpiled programming language based on Skript and written in TypeScript.
     <br> 
 </p>
 
