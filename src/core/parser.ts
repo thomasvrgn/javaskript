@@ -3,6 +3,7 @@
                  Parser
 //////////////////////////////////////*/
 
+import { Token } from 'typings/token';
 import scanner from './scanner';
 
 export default class Tokenizer {
@@ -23,7 +24,7 @@ export default class Tokenizer {
     });
   }
 
-  public static tokenize(string: string) {
+  public static tokenize(string: string): Array<Token> {
     return scanner(string, this);
   }
 }

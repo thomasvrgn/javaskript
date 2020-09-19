@@ -10,6 +10,7 @@ export function formatOutput(currentToken: string, tokenValue: string, tokenizer
   const output: Token = {
     token: currentToken,
     value: tokenValue,
+    length: tokenValue.length,
   };
   if (currentToken in tokenizer.customOut) output.customOut = tokenizer.customOut[currentToken];
   return output;

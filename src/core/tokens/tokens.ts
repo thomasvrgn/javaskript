@@ -4,7 +4,7 @@
 //////////////////////////////////////*/
 
 export default {
-  TABS: /\s+?/g, // Match tabs in code
-  STRING: /".*?"/g, // Match string and its content.
+  TABS: /\s+?/, // Match tabs in code
+  STRING: /".*?"/, // Match string and its content.
   PRINT: /print/, // Match print keyword.
 };
