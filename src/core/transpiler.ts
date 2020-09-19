@@ -23,7 +23,18 @@ export default class Transpiler {
   }
 
   public transpile(): string {
-    console.log(this.tokens);
+    this.tokens.map((line: Array<Token>) => {
+      line.map((item: Token) => {
+        const {
+          token,
+          value,
+          length,
+        } = item;
+        console.log(token, value, length);
+        return true;
+      });
+      return true;
+    });
     return this.code;
   }
 }
