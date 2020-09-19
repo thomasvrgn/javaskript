@@ -3,6 +3,8 @@
                   Main
 //////////////////////////////////////*/
 
-import Comments from 'other/comment';
+import Transpiler from 'core/transpiler';
 
-console.log(Comments.generate('Javaskript', 'Index test'));
+const transpiled = new Transpiler();
+
+console.log(transpiled.transpile());
