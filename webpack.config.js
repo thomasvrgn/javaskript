@@ -18,6 +18,7 @@ module.exports = {
       tokens: path.resolve(__dirname, 'src/core/tokens/tokens.ts'),
       core: path.resolve(__dirname, 'src/core'),
       utils: path.resolve(__dirname, 'src/utils'),
+      typings: path.resolve(__dirname, 'src/interfaces'),
       tests: path.resolve(__dirname, 'tests')
     }
   },

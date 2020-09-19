@@ -19,7 +19,8 @@
             "tokens": ["./src/core/tokens/tokens.ts"],
             "other/*": ["./src/other/*"],
             "utils": ["./src/utils/*"],
-            "tests/*": ["./tests/*"]
+            "tests/*": ["./tests/*"],
+            "typings/*": ["./src/typings/*"]
         }
         
     },
