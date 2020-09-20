@@ -3,7 +3,7 @@
                   File
 //////////////////////////////////////*/
 
-import { readFile } from 'fs';
+import { readFile, readFileSync } from 'fs';
 
 export default class File {
   private fileName: string;
@@ -19,5 +19,13 @@ export default class File {
         resolve(data);
       });
     });
+  }
+
+  public readSync(): string | unknown {
+    try {
+      return readFileSync(this.fileName, 'utf-8');
+    } catch (exception) {
+      return exception;
+    }
   }
 }
