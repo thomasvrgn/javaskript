@@ -8,8 +8,7 @@ import { Token } from 'typings/token';
 import Tokens from 'tokens';
 import * as Path from 'path';
 import File from 'utils/file';
-import * as Moment from 'moment';
-import * as Chalk from 'chalk';
+import Error from 'utils/error';
 
 export default class Transpiler {
   private code: string = '';
@@ -52,9 +51,13 @@ export default class Transpiler {
               : '';
             if (error) {
               if (error.includes('no such file or directory')) {
-                console.log(`[${Chalk.grey(Moment().format('HH:mm:ss'))}] File ${value} not found.`);
+                const message = new Error(`File ${value} not found.`);
+                message.log();
               }
-            } else this.code += code;
+            } else {
+              this.code += code;
+              new Transpiler(code, Path.dirname(path)).transpile();
+            }
             break;
           }
           case 'IMPORT': {
