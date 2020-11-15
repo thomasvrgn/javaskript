@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /*//////////////////////////////////////
                Javaskript
                  Parser
@@ -24,26 +25,41 @@ export default class Parser {
   }
 
   protected print(tokens: Token[], index: number, ast: Node, token: Token) {
-    ast.children.push({
-      type: Types.FunctionCall,
-      raw: token.value,
-      children: [],
-      parent: ast,
-    });
-    this.Any(this.tokens, index + 1, this.ast, this.tokens[index + 1]);
+    ast.type = Types.FunctionCall;
+    ast.raw = token.value;
+    ast.children = [
+      {
+        type: Types.Unknown,
+        parent: ast,
+      },
+    ];
+    return this.Any(this.tokens, index + 1, ast.children.slice(-1)[0], this.tokens[index + 1]);
+  }
+
+  protected string(tokens: Token[], index: number, ast: Node, token: Token) {
+    ast.type = Types.String;
+    ast.raw = token.value;
+    return this.Any(this.tokens, index + 1, ast, this.tokens[index + 1]);
+  }
+
+  protected space(tokens: Token[], index: number, ast: Node, token: Token) {
+    return this.Any(this.tokens, index + 1, ast, this.tokens[index + 1]);
   }
 
   // eslint-disable-next-line class-methods-use-this
-  private Any(tokens: Token[], index: number, ast: Node, token: Token): null {
-    const fn: Function | undefined = this[token.value.toLocaleLowerCase()];
-    if (!fn) return null;
-    this[token.value.toLocaleLowerCase()](this.tokens, index, ast, this.tokens[index]);
+  protected Any(tokens: Token[], index: number, ast: Node, token: Token): null {
+    if (!token || !token.token) return null;
+    if (!this[token.token.toLocaleLowerCase()]) return null;
+    this[token.token.toLocaleLowerCase()](this.tokens, index, ast, this.tokens[index]);
     return null;
   }
 
-  public parse(): string {
-    this.Any(this.tokens, 0, this.ast, this.tokens[0]);
-    console.log(this.ast);
-    return this.content;
+  public parse(): Node {
+    this.ast.children.push({
+      type: Types.Unknown,
+      parent: this.ast,
+    });
+    this.Any(this.tokens, 0, this.ast.children.slice(-1)[0], this.tokens[0]);
+    return this.ast;
   }
 }

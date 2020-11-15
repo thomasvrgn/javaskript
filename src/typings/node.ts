@@ -2,6 +2,7 @@ export enum Types {
   Program = 'Program',
   FunctionCall = 'FunctionCall',
   String = 'String',
+  Unknown = 'Unknown',
 }
 
 export interface Node {
