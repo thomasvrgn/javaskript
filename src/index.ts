@@ -3,13 +3,12 @@
                   Main
 //////////////////////////////////////*/
 
-import Transpiler from 'core/transpiler';
+import Parser from 'core/parser';
 import * as FS from 'fs';
 
 async function main() {
-  const transpiled = new Transpiler(FS.readFileSync('./bin/skript.sk', 'utf-8'), './bin');
-  const code: string = await transpiled.transpile();
-  console.log(code);
+  const transpiled = new Parser(FS.readFileSync('./sample/index.sk', 'utf-8'));
+  await transpiled.parse();
 }
 
 main();

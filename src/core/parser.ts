@@ -3,28 +3,20 @@
                  Parser
 //////////////////////////////////////*/
 
-import { Token } from 'typings/token';
-import scanner from './scanner';
+import { Types, Node } from 'typings/node';
 
-export default class Tokenizer {
-  public static tokens: Object = {};
+export default class Parser {
+  private readonly ast: Node = {
+    type: Types.Program,
+    children: [],
+  };
 
-  public static customOut: Object = {};
+  constructor(
+    private readonly content: string,
+  ) {}
 
-  public static ignore: Object = {};
-
-  public static functions: Object = {};
-
-  public static addTokenSet(tokenSet: Object) {
-    return Object.entries(tokenSet).map((x: Array<string>) => {
-      const property: string = x[0];
-      const value: string = x[1];
-      this.tokens[property] = value;
-      return true;
-    });
-  }
-
-  public static tokenize(string: string): Array<Token> {
-    return scanner(string, this);
+  public parse(): string {
+    console.log(this.content, this.ast);
+    return this.content;
   }
 }

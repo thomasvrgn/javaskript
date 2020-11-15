@@ -3,7 +3,7 @@
                Transpiler
 //////////////////////////////////////*/
 
-import Parser from 'core/parser';
+import Parser from 'core/lexer';
 import { Token } from 'typings/token';
 import Tokens from 'tokens';
 import * as Path from 'path';
